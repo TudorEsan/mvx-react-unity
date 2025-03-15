@@ -5,7 +5,6 @@
   "description": "An out-of-the-box sandbox environment for the React Unity WebGL package. This environment contains a Vite React setup including both the source and build of a Unity WebGL project, allowing to test and debug all of its features.",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "start:devnet": "npm run copy:devnet-config & vite dev",
     "start:testnet": "npm run copy:testnet-config & vite dev",
     "start:mainnet": "npm run copy:mainnet-config & vite dev",

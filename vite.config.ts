@@ -3,7 +3,8 @@ import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 import { nodePolyfills } from "vite-plugin-node-polyfills";
 import basicSsl from "@vitejs/plugin-basic-ssl";
-import svgrPlugin from "vite-plugin-svgr";
+import svgr from "vite-plugin-svgr";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,7 +14,8 @@ export default defineConfig({
       globals: { Buffer: true, global: true, process: true },
     }),
     basicSsl(),
-    svgrPlugin,
+    svgr(),
+    tsconfigPaths(),
   ],
   resolve: {
     alias: {
