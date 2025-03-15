@@ -1,0 +1,58 @@
+{
+  "name": "react-unity-webgl-template",
+  "private": true,
+  "version": "3.0.0",
+  "description": "An out-of-the-box sandbox environment for the React Unity WebGL package. This environment contains a Vite React setup including both the source and build of a Unity WebGL project, allowing to test and debug all of its features.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start:devnet": "npm run copy:devnet-config & vite dev",
+    "start:testnet": "npm run copy:testnet-config & vite dev",
+    "start:mainnet": "npm run copy:mainnet-config & vite dev",
+    "build:devnet": "npm run copy:devnet-config & vite build",
+    "build:testnet": "npm run copy:testnet-config & vite build",
+    "build:mainnet": "npm run copy:mainnet-config & vite build",
+    "copy:devnet-config": "cp ./src/config/config.devnet.ts ./src/config/index.ts",
+    "copy:testnet-config": "cp ./src/config/config.testnet.ts ./src/config/index.ts",
+    "copy:mainnet-config": "cp ./src/config/config.mainnet.ts ./src/config/index.ts",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@multiversx/sdk-dapp": "^3.3.1",
+    "framer-motion": "^10.17.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.1",
+    "react-unity-webgl": "^9.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.3",
+    "vite": "^4.4.9",
+    "vite-plugin-node-polyfills": "^0.19.0",
+    "vitest": "^1.2.2",
+    "@vitejs/plugin-basic-ssl": "^1.0.1",
+    "@vitejs/plugin-react": "^4.1.0",
+    "vite-plugin-svgr": "^4.0.0",
+    "vite-tsconfig-paths": "^4.2.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
